@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+DirectoryIndex /src/index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+AddDefaultCharset utf-8
+RewriteBase /
+RewriteRule ^(.*)$ src/index.php

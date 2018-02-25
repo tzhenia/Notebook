@@ -1,0 +1,96 @@
+body{
+    font-family: Tahoma;
+}
+
+header, footer{
+    background: #efefef;
+}
+
+footer{
+    margin-top: 15px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+.nav, .nav li{
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+
+.logo-footer{
+    font-weight: 600;
+}
+
+.logo-footer:hover{
+    font-weight: 600;
+}
+
+
+.logo{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.title div h1{
+    text-align: center;
+}
+
+h1{
+    font-size: 28px;
+}
+
+h1 small{
+    font-size: 16px;
+    color: #b00;
+    text-transform: uppercase;
+}
+
+
+.date{
+    margin: 30px 0 0 0;
+}
+
+.content{
+    margin:20px 0 25px 0;
+}
+
+
+.note{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.note div:first-child{
+    padding-top:10px;
+}
+
+.note div:first-child a{
+    color: #000;
+    font-size: 15px;
+}
+
+.deleted div:first-child a{
+    color: #c7c7c7 !important;
+    text-decoration: line-through;
+}
+
+.note div:first-child a:hover{
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.note div:first-child a span{
+    font-weight: bold;
+}
+
+.note div:last-child{
+    text-align: right;
+}
