@@ -38,10 +38,6 @@ p {
     font-size: 16px;
 }
 
-.copyright{
-
-}
-
 h1{
     font-size: 28px;
 }
@@ -53,4 +49,32 @@ h1{
 
 .content{
     margin:20px 0 25px 0;
+}
+
+
+.note{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.note div:first-child{
+    padding-top:10px;
+}
+
+.note div:first-child a{
+    color: #000;
+    font-size: 15px;
+}
+
+.note div:first-child a:hover{
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.note div:first-child a span{
+    font-weight: bold;
+}
+
+.note div:last-child{
+    text-align: right;
 }
