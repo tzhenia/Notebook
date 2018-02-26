@@ -18,16 +18,14 @@
                     <textarea class="form-control" maxlength="500" required>...</textarea>
                 </div>
 
-                <div class="form-group">
-                    <input type="submit" class="btn btn-success" value="Success">
+                <div class="form-group text-right">
+                    <input type="submit" class="btn btn-success" value="Done">
                 </div>
-
             </form>
         </div>
     </div>
 
     <?php require_once "view/requirementsNotes.php"; ?>
-
 </div>
 
 <?php
