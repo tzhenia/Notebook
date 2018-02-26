@@ -20,3 +20,7 @@ footer{
     font-weight: bold;
     font-size: 16px;
 }
+
+.copyright{
+    text-align: right;
+}
