@@ -4,7 +4,7 @@ require_once "view/header.php";
 
 <div class="container">
     <div class="row title">
-        <div class="col-xs-12"><h1>List of notes</h1></div>
+        <div class="col-xs-12"><h1>Edit ID: 1111</h1></div>
     </div>
 
     <div class="row">
