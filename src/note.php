@@ -4,8 +4,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-10"><h1>ID: 111 - Title <small>Deleted</small></h1></div>
-        <div class="col-lg-2"><p class="date text-right">01.01.2018 (00:00)</p></div>
+        <div class="col-sm-9"><h1>ID: 111 - Title <small>Deleted</small></h1></div>
+        <div class="col-sm-3"><p class="date text-right">01.01.2018 (00:00)</p></div>
     </div>
     <div class="row">
         <div class="col-lg-12">

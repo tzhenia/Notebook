@@ -34,7 +34,7 @@ p {
 }
 
 
-.nav li:first-child a{
+.logo{
     font-weight: bold;
     font-size: 16px;
 }
@@ -55,7 +55,7 @@ h1 small{
 
 
 .date{
-    margin: 20px 0 0 0;
+    margin: 30px 0 0 0;
 }
 
 .content{
