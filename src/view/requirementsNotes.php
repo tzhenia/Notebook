@@ -7,8 +7,8 @@
 <div class="row">
     <div class="col-lg-12">
          <ul>
-             <li>A title should consist of 3 - 50 symbols</li>
-             <li>A text should consist of 3 - 500 symbols</li>
+             <li>A title should consist of 3 - 75 symbols</li>
+             <li>A text should consist of 500 symbols max</li>
          </ul>
     </div>
 </div>
