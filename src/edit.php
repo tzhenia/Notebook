@@ -1,5 +1,5 @@
 <?php
-require_once "view/header.php";
+    require_once "view/header.php";
 ?>
 
 <div class="container">
@@ -9,11 +9,25 @@ require_once "view/header.php";
 
     <div class="row">
         <div class="col-lg-12">
-            form
+            <form action="#" method="post" >
+                <div class="form-group">
+                    <input type="text" class="form-control" minlength="3" maxlength="75" placeholder="Enter your title of note" required >
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" maxlength="500" required>text of note</textarea>
+                </div>
+
+                <div class="form-group text-right">
+                    <input type="submit" class="btn btn-success" value="Done">
+                </div>
+            </form>
         </div>
     </div>
+
+    <?php require_once "view/requirementsNotes.php"; ?>
 </div>
 
 <?php
-require_once "view/footer.php";
+    require_once "view/footer.php";
 ?>
