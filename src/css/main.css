@@ -71,6 +71,11 @@ h1{
     font-size: 15px;
 }
 
+.deleted{
+    color: #c7c7c7 !important;
+    text-decoration: line-through;
+}
+
 .note div:first-child a:hover{
     color: #337ab7;
     text-decoration: none;

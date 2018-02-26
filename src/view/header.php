@@ -18,6 +18,7 @@
                     <ul class="nav">
                         <li><a href="/">Notebook</a></li>
                         <li><a href="index.php">Home</a></li>
+                        <li><a href="index.php?show=all">All notes</a></li>
                         <li><a href="new.php">Add new</a></li>
                     </ul>
                 </div>
