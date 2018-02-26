@@ -1,0 +1,22 @@
+header, footer{
+    background: #fafbfc;
+}
+
+footer{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.nav, .nav li{
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+
+.nav li:first-child a{
+    font-weight: bold;
+    font-size: 16px;
+}
