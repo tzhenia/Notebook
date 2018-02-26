@@ -24,7 +24,7 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="nav">
-                <li><a href="#">Notebook</a></li>
+                <li><a href="/">Notebook</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Add new</a></li>
             </ul>
