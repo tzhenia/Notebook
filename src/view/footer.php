@@ -1,7 +1,7 @@
 <footer class="container">
     <div class="row">
         <div class="col-lg-6">
-            Notebook
+            <a href="#" class="logo-footer">Notebook</a>
         </div>
 
         <div class="text-right copyright col-lg-6">

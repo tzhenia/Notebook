@@ -1,3 +1,7 @@
+body{
+    font-family: Tahoma;
+}
+
 header, footer{
     background: #fafbfc;
 }
@@ -7,12 +11,25 @@ footer{
     padding-bottom: 10px;
 }
 
+p {
+    text-align: justify;
+}
+
 .nav, .nav li{
     list-style: none;
 }
 
 .nav li {
     display: inline-block;
+}
+
+
+.logo-footer{
+    font-weight: 600;
+}
+
+.logo-footer:hover{
+    font-weight: 600;
 }
 
 
@@ -31,8 +48,7 @@ h1{
 
 
 .date{
-    margin-top: 20px;
-    height: 30px;
+    margin: 20px 0 0 0;
 }
 
 .content{

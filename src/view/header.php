@@ -25,8 +25,8 @@
         <div class="col-lg-12">
             <ul class="nav">
                 <li><a href="/">Notebook</a></li>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../new.php">Add new</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="new.php">Add new</a></li>
             </ul>
         </div>
     </div>

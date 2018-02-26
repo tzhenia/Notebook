@@ -1,5 +1,5 @@
 <?php
-require_once "view/header.php";
+    require_once "view/header.php";
 ?>
 
 <div class="container">
@@ -14,5 +14,5 @@ require_once "view/header.php";
 </div>
 
 <?php
-require_once "view/footer.php";
+    require_once "view/footer.php";
 ?>
