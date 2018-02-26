@@ -22,5 +22,15 @@ footer{
 }
 
 .copyright{
-    text-align: right;
+
+}
+
+h1{
+    font-size: 28px;
+}
+
+
+.date{
+    margin-top: 20px;
+    height: 30px;
 }
