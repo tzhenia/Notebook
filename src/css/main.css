@@ -47,6 +47,12 @@ h1{
     font-size: 28px;
 }
 
+h1 small{
+    font-size: 16px;
+    color: #b00;
+    text-transform: uppercase;
+}
+
 
 .date{
     margin: 20px 0 0 0;
