@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="form-group">
-                    <textarea class="form-control" maxlength="500" required>text of note</textarea>
+                    <textarea class="form-control" maxlength="500" required>...</textarea>
                 </div>
 
                 <div class="form-group text-right">
