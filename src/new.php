@@ -3,9 +3,10 @@
 ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12"><h1>Add new note</h1></div>
+    <div class="row title">
+        <div class="col-xs-12"><h1>List of notes</h1></div>
     </div>
+
     <div class="row">
         <div class="col-lg-12">
             form
