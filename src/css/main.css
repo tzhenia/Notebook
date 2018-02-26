@@ -7,6 +7,7 @@ header, footer{
 }
 
 footer{
+    margin-top: 15px;
     padding-top:10px;
     padding-bottom: 10px;
 }
@@ -36,6 +37,10 @@ p {
 .nav li:first-child a{
     font-weight: bold;
     font-size: 16px;
+}
+
+.title div h1{
+    text-align: center;
 }
 
 h1{
@@ -77,9 +82,4 @@ h1{
 
 .note div:last-child{
     text-align: right;
-}
-
-.body{
-    margin-top: 15px;
-    margin-bottom: 10px;
 }

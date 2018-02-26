@@ -2,8 +2,8 @@
     require_once "view/header.php";
 ?>
 
-    <div class="container body">
-        <div class="row note">
+    <div class="container">
+        <div class="row title">
                 <div class="col-xs-12"><h1>List of notes</h1></div>
         </div>
 
