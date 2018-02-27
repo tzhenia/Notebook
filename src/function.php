@@ -14,4 +14,26 @@ $dsn = 'mysql:host=' . $host . ';dbname=' . $db;
 
 $db_connect = new PDO($dsn, $user, $pass);
 
+
+function create(){
+
+}
+
+function getOne(){
+
+}
+
+function getAll(){
+
+}
+
+function update(){
+
+}
+
+function delete(){
+
+}
+
+
 ?>
