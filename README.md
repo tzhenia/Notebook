@@ -1,2 +1,2 @@
 # Notebook
-Crud PDO
+Site written in php (CRUD, PDO)
