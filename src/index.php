@@ -3,6 +3,11 @@
 ?>
 
     <div class="container">
+
+
+        <?php require_once "controller/alert.php"?>
+
+
         <div class="row title">
                 <div class="col-xs-12"><h1>List of notes</h1></div>
         </div>
