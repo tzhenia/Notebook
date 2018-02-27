@@ -1,5 +1,5 @@
 <?php
-require_once "function.php";
+    require_once "controller/config.php";
 ?>
 
 <!DOCTYPE html>
