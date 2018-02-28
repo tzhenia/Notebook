@@ -1,5 +1,6 @@
 <?php
-    require_once "controller/config.php";
+    require_once "controller/Config.php";
+    require_once "controller/Alert.php";
 ?>
 
 <!DOCTYPE html>
