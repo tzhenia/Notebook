@@ -7,9 +7,7 @@
 
 require_once "Config.php";
 
-
-abstract class AddNewNote{
-
+abstract class AddNewNote extends ValidationForms {
 
     public static function check_GET(){
 
@@ -34,13 +32,13 @@ abstract class AddNewNote{
    static function AddNote(){
         $query = "INSERT INTO notes SET title=:title, text=:text, status=:status, dateTime=:dateTime";
 
-        $title = htmlspecialchars(strip_tags($_POST['title']));
-        $text = htmlspecialchars(strip_tags($_POST['text']));
+        $title = ValidationForms::Check("title");
+        $text =  ValidationForms::Check("text");
+
         $status = "1";
+        $dateTime = date('Y-m-d H:i:s');
 
         $stmt = Config::get_db_connect()->prepare($query);
-
-        $dateTime = date('Y-m-d H:i:s');
         $stmt->bindParam(':dateTime', $dateTime);
         $stmt->bindParam(':title', $title);
         $stmt->bindParam(':text', $text);
