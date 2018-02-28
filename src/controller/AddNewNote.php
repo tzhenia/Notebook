@@ -54,20 +54,8 @@ abstract class AddNewNote extends ValidationForms {
         }
     }
 
-
-
 }
 
 
 AddNewNote::check_GET();
-
-
-
-
-
-
-
-
-
-
 ?>
