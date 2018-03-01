@@ -6,6 +6,7 @@
  */
 
 require_once "Config.php";
+require_once "ValidationForms.php";
 
 abstract class AddNewNote extends ValidationForms {
 
