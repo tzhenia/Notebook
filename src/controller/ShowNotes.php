@@ -32,7 +32,7 @@ abstract class ShowNotes{
 
                
                  <div class='row note'>
-                <div class='col-xs-12 col-sm-9 col-md-10'><a href='note.php'><span>ID: {$id}</span> - {$dateTime} - {$title}</a></div>
+                <div class='col-xs-12 col-sm-9 col-md-10'><a href='note.php?id={$id}'><span>ID: {$id}</span> - {$dateTime} - {$title}</a></div>
                 <div class='col-xs-12 col-sm-3 col-md-2'>
                     <a href='edit.php?id={$id}' type='button' class='btn btn-warning'>Edit</a>
                     <a href='delete.php?id={$id}' type='button' class='btn btn-danger'>Delete</a>
