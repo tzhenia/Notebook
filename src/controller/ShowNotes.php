@@ -40,7 +40,6 @@ abstract class ShowNotes{
 
     }
 
-
     private static function printOne($stmt){
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){

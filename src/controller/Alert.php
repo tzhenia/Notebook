@@ -1,4 +1,10 @@
 <?php
+/**
+ * User: Yevhenii Taranukha
+ * Contacts: tzhenia.com
+ * Date: 2.28.18 (17:31)
+ */
+
 
 abstract class Alert{
 

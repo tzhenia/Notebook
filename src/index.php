@@ -1,6 +1,12 @@
 <?php
     require_once "view/header.php";
     require_once "controller/ShowNotes.php";
+    require_once "controller/Get.php";
+
+    if (isset($_GET['show'])) {
+        $show = $_GET['show'];
+        Get::checkGet($show);
+    }
 ?>
 
     <div class="container">
