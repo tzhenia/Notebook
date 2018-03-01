@@ -11,7 +11,7 @@
             <div class="col-xs-12"><h1>List of notes</h1></div>
         </div>
 
-        <?php ShowNotes::printAll(); ?>
+        <?php ShowNotes::checkNote("all"); ?>
 
     </div>
 
