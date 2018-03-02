@@ -156,7 +156,7 @@ abstract class ShowNotes{
         }
 
         else{
-            $query = "SELECT * FROM notes WHERE status = 1 ORDER BY id";
+            $query = "SELECT * FROM notes WHERE status = 1 ORDER BY id DESC";
         }
 
 
