@@ -1,4 +1,12 @@
 <?php
+
+    require_once "components/router.php";
+
+    $router = new Router();
+    $router->run();
+
+
+
     require_once "view/header.php";
     require_once "controller/ShowNotes.php";
     require_once "controller/Get.php";
