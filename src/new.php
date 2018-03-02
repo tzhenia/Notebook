@@ -24,10 +24,9 @@
             </form>
         </div>
     </div>
-
-    <?php require_once "view/requirementsNotes.php"; ?>
 </div>
 
 <?php
+    require_once "view/requirementsNotes.php";
     require_once "view/footer.php";
 ?>

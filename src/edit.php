@@ -10,9 +10,9 @@
 
 
     <?php ShowNotes::printOneEdit($id); ?>
-    <?php require_once "view/requirementsNotes.php"; ?>
 
 
 <?php
+    require_once "view/requirementsNotes.php";
     require_once "view/footer.php";
 ?>
