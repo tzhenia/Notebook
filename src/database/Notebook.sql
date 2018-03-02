@@ -33,14 +33,14 @@ CREATE TABLE `notes` (
   `title` varchar(75) NOT NULL,
   `text` varchar(500) NOT NULL,
   `status` tinyint(10) NOT NULL,
-  `date` datetime NOT NULL
+  `dateTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Дамп даних таблиці `notes`
 --
 
-INSERT INTO `notes` (`id`, `title`, `text`, `status`, `date`) VALUES
+INSERT INTO `notes` (`id`, `title`, `text`, `status`, `dateTime`) VALUES
 (1, 'Aenean nec purus arcu!', 'Vivamus id nisi sit amet magna vestibulum convallis quis nec risus. Duis suscipit nec ante accumsan blandit. Etiam eget lacus non nibh vehicula vehicula non ut magna. Maecenas eu nulla sapien. Nullam vel varius velit, sit amet eleifend est. Morbi ac magna ut elit vehicula venenatis in sed erat. Pellentesque ullamcorper accumsan dolor, ut pellentesque ante posuere non.', 1, '2018-02-27 10:16:05'),
 (2, 'In vel risus imperdiet, molestie eros ac, cursus neque.', 'Maecenas cursus at est quis dapibus. Suspendisse quis nibh iaculis, iaculis massa facilisis, egestas ex. Pellentesque mollis, quam nec rutrum posuere, mi lorem rhoncus enim, in fermentum urna dolor sed quam. Donec nec sapien sapien. Pellentesque eu nulla ut tellus luctus mattis id hendrerit nisl. Cras vulputate finibus nulla, ut luctus purus finibus in. Nullam sagittis egestas sem ac rutrum. Morbi id erat scelerisque diam sollicitudin porttitor at a nibh.', 0, '2018-02-27 12:08:42'),
 (3, 'Cras vulputate finibus nulla', 'Phasellus ultrices congue hendrerit. Sed pharetra rhoncus nulla tincidunt mollis. In ut bibendum lorem. Fusce dapibus ut lacus eget consectetur. Quisque posuere cursus dolor ut volutpat. Nam mollis neque quis sagittis condimentum. Nam sollicitudin tristique dui in volutpat. Vivamus eu mauris et nibh tristique interdum.', 1, '2018-02-27 14:18:10'),

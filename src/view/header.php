@@ -1,5 +1,6 @@
 <?php
-require_once "function.php";
+    require_once "controller/Config.php";
+    require_once "controller/Alert.php";
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +21,8 @@ require_once "function.php";
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="nav">
-                        <li><a href="/" class="logo hidden-xs">Notebook</a></li>
-                        <li><a href="/" class="logo visible-xs">NB</a></li>
+                        <li><a href="<?php echo Config::ROOT?>" class="logo hidden-xs">Notebook</a></li>
+                        <li><a href="<?php echo Config::ROOT?>" class="logo visible-xs">NB</a></li>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="index.php?show=all">All notes</a></li>
                         <li><a href="new.php">Add new</a></li>

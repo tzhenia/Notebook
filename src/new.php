@@ -9,13 +9,13 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form action="#" method="post" >
+            <form action="controller/AddNewNote.php" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" minlength="3" maxlength="75" placeholder="Enter your title of note" required >
+                    <input type="text" name='title' class="form-control" minlength="3" maxlength="75" placeholder="Enter your title of note" required >
                 </div>
 
                 <div class="form-group">
-                    <textarea class="form-control" maxlength="500" required>...</textarea>
+                    <textarea name='text' class="form-control" maxlength="500" required>...</textarea>
                 </div>
 
                 <div class="form-group text-right">
@@ -24,10 +24,9 @@
             </form>
         </div>
     </div>
-
-    <?php require_once "view/requirementsNotes.php"; ?>
 </div>
 
 <?php
+    require_once "view/requirementsNotes.php";
     require_once "view/footer.php";
 ?>
