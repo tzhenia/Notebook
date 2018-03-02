@@ -30,7 +30,7 @@ class EditNote extends ValidationForms{
     }
 
 
-    static function updateNote(){
+    private static function updateNote(){
         $query = "UPDATE notes SET title=:title, text=:text, status=:status, dateTime=:dateTime WHERE id = 41";
 
         $title = ValidationForms::Check("title");
