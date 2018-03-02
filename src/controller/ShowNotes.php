@@ -137,6 +137,7 @@ abstract class ShowNotes{
                 
                                 <div class='form-group text-right'>
                                     <input type='hidden' name='id' value='$id'>
+                                    <a href='controller/DeleteNote.php?delete=$id' class='btn btn-danger'>Remove from database</a>
                                     <input type='submit' class='btn btn-success' value='UPDATE'>
                                 </div>
                             </form>
@@ -181,7 +182,7 @@ abstract class ShowNotes{
                     <div class='col-xs-12 col-sm-9 col-md-10'><a href='note.php?id={$id}'><span>ID: {$id}</span> - {$dateTime} - {$title}</a></div>
                     <div class='col-xs-12 col-sm-3 col-md-2'>
                         <a href='edit.php?id={$id}' type='button' class='btn btn-warning'>Edit</a>
-                        <a href='delete.php?id={$id}' type='button' class='btn btn-danger'>Delete</a>
+                        <a href='controller/DeleteNote.php?id={$id}' type='button' class='btn btn-danger'>Delete</a>
                     </div>
                 </div>
              ";
