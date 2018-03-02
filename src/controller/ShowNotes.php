@@ -70,7 +70,7 @@ abstract class ShowNotes{
             echo "                   
                 <div class='container'>
                     <div class='row'>
-                        <div class='col-sm-9'><h1>ID: {$id} - Title <small>{$status}</small></h1></div>
+                        <div class='col-sm-9'><h1>ID: {$id} - {$title} <small>{$status}</small></h1></div>
                         <div class='col-sm-3'><p class='date text-right'>{$dateTime}</p></div>
                     </div>
                     <div class='row'>
