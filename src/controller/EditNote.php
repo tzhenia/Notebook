@@ -31,7 +31,8 @@ class EditNote extends ValidationForms{
 
 
     private static function updateNote(){
-        $query = "UPDATE notes SET title=:title, text=:text, status=:status, dateTime=:dateTime WHERE id = 41";
+        $id = $_POST['id'];
+        $query = "UPDATE notes SET title=:title, text=:text, status=:status, dateTime=:dateTime WHERE id=" . $id;
 
         $title = ValidationForms::Check("title");
         $text =  ValidationForms::Check("text");
@@ -44,14 +45,15 @@ class EditNote extends ValidationForms{
         $stmt->bindParam(':title', $title);
         $stmt->bindParam(':text', $text);
         $stmt->bindParam(':status', $status);
+        //$stmt->bindParam(':id', $id);
 
 
         if($stmt->execute()){
-            header("location: " . Config::ROOT . "/index.php?alert=saved");
+           header("location: " . Config::ROOT . "/index.php?alert=saved");
         }
 
         else{
-            header("location: " . Config::ROOT . "/index.php?alert=unable");
+           header("location: " . Config::ROOT . "/index.php?alert=unable");
         }
     }
 

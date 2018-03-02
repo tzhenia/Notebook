@@ -1,5 +1,10 @@
 <?php
     require_once "view/header.php";
+
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+
+    }
 ?>
 
 <div class="container">
@@ -9,7 +14,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form action="controller/EditNote.php" method="post" >
+            <form action="controller/EditNote.php?" method="post" >
                 <div class="form-group">
                     <input type="text" name='title'  class="form-control" minlength="3" maxlength="75" placeholder="Enter your title of note" required >
                 </div>
@@ -19,6 +24,7 @@
                 </div>
 
                 <div class="form-group text-right">
+                    <input type="hidden" name='id' value='<?php echo $id ?>'>
                     <input type="submit" class="btn btn-success" value="UPDATE">
                 </div>
             </form>
