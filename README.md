@@ -1,2 +1,4 @@
 # Notebook
-Site written in php (CRUD, PDO)
+Read more at https://github.com/tzhenia/Notebook/wiki
+
+Pro version https://github.com/tzhenia/NotebookPRO
