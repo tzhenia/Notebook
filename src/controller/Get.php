@@ -5,25 +5,15 @@
  * Date: 3.1.18 (17:31)
  */
 
-
-
 abstract class Get{
 
+    public static function checkGetAll($showAll){
 
-    public static function checkGet($show){
-
-
-
-            if ($show=="all"){
-
+            if ($showAll  == "all"){
+                return true;
             }
 
-            else{
-
-            }
-
-
-
+            return false;
     }
 
 

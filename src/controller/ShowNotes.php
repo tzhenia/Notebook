@@ -11,7 +11,20 @@ require_once "Config.php";
 abstract class ShowNotes{
 
 
-    public static function checkNote($howMany){
+
+    public static function printNote(){
+
+        $checkNote = self::checkNote();
+        $showAll = false;
+
+        if($checkNote && isset($_GET['show'])){
+           $showAll = Get::checkGetAll($_GET['show']);
+        }
+
+        self::printAll($showAll);
+    }
+
+    private static function checkNote(){
 
         $query = "SELECT * FROM notes ORDER BY id";
         $stmt = Config::get_db_connect()->prepare($query);
@@ -19,23 +32,12 @@ abstract class ShowNotes{
 
         $num = $stmt->rowCount();
 
-        if ($num > 0) {
-
-            if ($howMany == "all"){
-                self::printAll($stmt);
-            }
-
-            else{
-                $query = "SELECT * FROM notes WHERE id = " . $howMany;
-                $stmt = Config::get_db_connect()->prepare($query);
-                $stmt->execute();
-                self::printOne($stmt);
-            }
-
+        if ($num == 0) {
+            self::printNUN();
         }
 
         else{
-            self::printNUN();
+           return true;
         }
 
     }
@@ -72,7 +74,21 @@ abstract class ShowNotes{
 
     }
 
-    private static function printAll($stmt){
+    private static function printAll($showAll){
+
+        echo $showAll;
+
+        if ($showAll){
+            $query = "SELECT * FROM notes ORDER BY id DESC";
+        }
+
+        else{
+            $query = "SELECT * FROM notes WHERE status = 1 ORDER BY id";
+        }
+
+
+        $stmt = Config::get_db_connect()->prepare($query);
+        $stmt->execute();
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
