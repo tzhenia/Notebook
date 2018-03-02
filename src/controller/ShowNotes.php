@@ -49,6 +49,12 @@ abstract class ShowNotes{
         $stmt = Config::get_db_connect()->prepare($query);
         $stmt->execute();
 
+        $num = $stmt->rowCount();
+
+        if ($num == 0) {
+            header("location: " . Config::ROOT);
+        }
+
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
             extract($row);
