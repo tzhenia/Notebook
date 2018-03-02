@@ -76,8 +76,6 @@ abstract class ShowNotes{
 
     private static function printAll($showAll){
 
-        echo $showAll;
-
         if ($showAll){
             $query = "SELECT * FROM notes ORDER BY id DESC";
         }
