@@ -2,20 +2,20 @@
 /**
  * User: Yevhenii Taranukha
  * Contacts: tzhenia.com
- * Date: 2.27.18 (19:06)
+ * Date: 3.2.18 (13:54)
  */
 
 require_once "Config.php";
 require_once "ValidationForms.php";
 
-abstract class AddNewNote extends ValidationForms {
+class EditNote extends ValidationForms{
 
     public static function check_GET(){
 
         if($_POST){
 
             try{
-                self::AddNote();
+                self::updateNote();
             }
 
             catch(PDOException $exception){
@@ -30,8 +30,8 @@ abstract class AddNewNote extends ValidationForms {
     }
 
 
-   static function AddNote(){
-        $query = "INSERT INTO notes SET title=:title, text=:text, status=:status, dateTime=:dateTime";
+    static function updateNote(){
+        $query = "UPDATE notes SET title=:title, text=:text, status=:status, dateTime=:dateTime WHERE id = 41";
 
         $title = ValidationForms::Check("title");
         $text =  ValidationForms::Check("text");
@@ -58,5 +58,4 @@ abstract class AddNewNote extends ValidationForms {
 }
 
 
-AddNewNote::check_GET();
-?>
+EditNote::check_GET();
