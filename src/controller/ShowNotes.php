@@ -93,6 +93,62 @@ abstract class ShowNotes{
 
     }
 
+    public static function printOneEdit($idNote){
+
+        $query = "SELECT * FROM notes WHERE id = " . $idNote;
+
+        $stmt = Config::get_db_connect()->prepare($query);
+        $stmt->execute();
+
+        $num = $stmt->rowCount();
+
+        if ($num == 0) {
+            header("location: " . Config::ROOT);
+        }
+
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+
+            extract($row);
+
+            if ($status == 0){
+                $status = "DELETED";
+            }
+
+            else{
+                $status = "";
+            }
+
+            echo "                   
+                <div class='container'>
+                    <div class='row title'>
+                        <div class='col-xs-12'><h1>Edit ID: $id</h1></div>
+                    </div>
+                
+                    <div class='row'>
+                        <div class='col-lg-12'>
+                            <form action='controller/EditNote.php?' method='post'>
+                                <div class='form-group'>
+                                    <input type='text' name='title'  class='form-control' minlength='3' maxlength='75' value='$title' required >
+                                </div>
+                
+                                <div class='form-group'>
+                                    <textarea name='text' class='form-control' maxlength='500' required>$text</textarea>
+                                </div>
+                
+                                <div class='form-group text-right'>
+                                    <input type='hidden' name='id' value='$id'>
+                                    <input type='submit' class='btn btn-success' value='UPDATE'>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                 </div>
+             ";
+
+        }
+
+    }
+
     private static function printAll($showAll){
 
         if ($showAll){

@@ -2,11 +2,10 @@
     require_once "view/header.php";
     require_once "controller/ShowNotes.php";
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
 
-}
-
+    }
 
 ?>
 
