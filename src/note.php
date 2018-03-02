@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 
 ?>
 
-    <?php ShowNotes::checkNote($id); ?>
+    <?php ShowNotes::printOne($id); ?>
 
 <?php
     require_once "view/footer.php";

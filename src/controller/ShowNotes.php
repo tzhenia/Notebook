@@ -42,11 +42,24 @@ abstract class ShowNotes{
 
     }
 
-    private static function printOne($stmt){
+    public static function printOne($idNote){
+
+        $query = "SELECT * FROM notes WHERE id = " . $idNote;
+
+        $stmt = Config::get_db_connect()->prepare($query);
+        $stmt->execute();
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
             extract($row);
+
+            if ($status == 0){
+                $status = "DELETED";
+            }
+
+            else{
+                $status = "";
+            }
 
             echo "                   
                 <div class='container'>
