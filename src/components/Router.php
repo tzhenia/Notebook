@@ -11,7 +11,7 @@ class Router{
 
     public function __construct()
     {
-        $routesPath = 'config/routes.php';
+        $routesPath = ROOT . '/config/routes.php';
         $this->routes = include($routesPath);
     }
 
@@ -31,26 +31,31 @@ class Router{
 
             if(preg_match("~$uriPattern~", $uri)){
 
-                $segments = explode('/', $path);
-
-                $controllerName = array_shift($segments).'Controller';
-                $controllerName = ucfirst($controllerName);
-
-                $actionName = 'action'.ucfirst(array_shift($segments));
-
-                $controllerFile =  ROOT . '/controllers/' . $controllerName . '.php';
-
-                if (file_exists($controllerFile)){
-                    require_once($controllerFile);
-                }
-
-                $controllerObject = new $controllerName;
-                $result = $controllerObject -> $actionName();
-
-                if ($result != null){
-                    break;
-                }
+                echo "!!!!";
             }
          }
     }
+
 }
+
+
+
+//$segments = explode('/', $path);
+//
+//$controllerName = array_shift($segments).'Controller';
+//$controllerName = ucfirst($controllerName);
+//
+//$actionName = 'action'.ucfirst(array_shift($segments));
+//
+//$controllerFile =  ROOT . '/controllers/' . $controllerName . '.php';
+//
+//if (file_exists($controllerFile)){
+//    require_once($controllerFile);
+//}
+//
+//$controllerObject = new $controllerName;
+//$result = $controllerObject -> $actionName();
+//
+//if ($result != null){
+//    break;
+//}

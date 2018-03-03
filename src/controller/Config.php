@@ -9,7 +9,7 @@ date_default_timezone_set('Europe/Kiev');
 
 abstract class Config {
 
-    const ROOT =  '/Notebook/src';
+    const ROOT =  '/src';
     const HOST = 'phpmyadmin.loc';
     const DB = 'NoteBook';
     const USER = 'homestead';
