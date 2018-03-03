@@ -8,4 +8,5 @@
 return array(
     'notes' => 'notes/index',
     'notesAll' => 'notes/indexAll',
+    'news' => 'news/index',
 );

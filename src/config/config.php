@@ -5,7 +5,8 @@
  * Date: 3.2.18 (22:18)
  */
 
-class config
-{
+class config{
+
+
 
 }
