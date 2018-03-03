@@ -31,7 +31,26 @@ class Router{
 
             if(preg_match("~$uriPattern~", $uri)){
 
-                echo "!!!!";
+                $segments = explode('/', $path);
+
+                $controllerName = array_shift($segments).'Controller';
+                $controllerName = ucfirst($controllerName);
+
+                $actionName = 'action'.ucfirst(array_shift($segments));
+
+                $controllerFile =  ROOT . '/controller/' . $controllerName . '.php';
+
+                if (file_exists($controllerFile)){
+                    include_once($controllerFile);
+                }
+
+                $controllerObject = new $controllerName;
+                $result = $controllerObject->$actionName();
+
+                if ($result != null){
+                    break;
+                }
+
             }
          }
     }
@@ -40,22 +59,3 @@ class Router{
 
 
 
-//$segments = explode('/', $path);
-//
-//$controllerName = array_shift($segments).'Controller';
-//$controllerName = ucfirst($controllerName);
-//
-//$actionName = 'action'.ucfirst(array_shift($segments));
-//
-//$controllerFile =  ROOT . '/controllers/' . $controllerName . '.php';
-//
-//if (file_exists($controllerFile)){
-//    require_once($controllerFile);
-//}
-//
-//$controllerObject = new $controllerName;
-//$result = $controllerObject -> $actionName();
-//
-//if ($result != null){
-//    break;
-//}

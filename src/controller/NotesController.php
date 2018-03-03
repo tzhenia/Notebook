@@ -8,10 +8,17 @@
 class NotesController
 {
 
-    function actionIndex(){
+    public function actionIndex(){
 
-        echo 'NoteController - actionIndex';
+        echo 'NotesController - actionIndex';
+        return true;
 
+    }
+
+    public function actionIndex2(){
+
+        echo 'NewsController - actionIndex 2222';
+        return true;
     }
 
 }

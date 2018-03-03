@@ -6,8 +6,6 @@
  */
 
 return array(
-    'notes' => 'notes/list',
-    'news' => 'news/index',
-    '/src/notes' => 'notes/list',
-    '/src/news' => 'news/index',
+    'notes' => 'notes/index',
+    'page2' => 'notes/index2',
 );
