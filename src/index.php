@@ -11,9 +11,9 @@
 
 
 
-////    require_once "view/header.php";
-////    require_once "controller/ShowNotes.php";
-////    require_once "controller/Get.php";
+////    require_once "views/header.php";
+////    require_once "controllers/ShowNotes.php";
+////    require_once "controllers/Get.php";
 //?>
 <!---->
 <!--    <div class="container">-->
@@ -30,5 +30,5 @@
 <!---->
 <!---->
 <?php
-//    require_once "view/footer.php";
+//    require_once "views/footer.php";
 //?>

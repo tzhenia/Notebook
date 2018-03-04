@@ -6,6 +6,7 @@
  */
 
 return array(
+    '1' => 'notes/Home',
     'notes' => 'notes/index',
     'page2' => 'notes/index2',
 );

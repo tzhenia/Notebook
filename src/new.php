@@ -1,5 +1,5 @@
 <?php
-    require_once "view/header.php";
+    require_once "views/header.php";
 ?>
 
 <div class="container">
@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form action="controller/AddNewNote.php" method="post">
+            <form action="controllers/AddNewNote.php" method="post">
                 <div class="form-group">
                     <input type="text" name='title' class="form-control" minlength="3" maxlength="75" placeholder="Enter your title of note" required >
                 </div>
@@ -27,6 +27,6 @@
 </div>
 
 <?php
-    require_once "view/requirementsNotes.php";
-    require_once "view/footer.php";
+    require_once "views/requirementsNotes.php";
+    require_once "views/footer.php";
 ?>

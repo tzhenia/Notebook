@@ -17,7 +17,13 @@ class NotesController
 
     public function actionIndex2(){
 
-        echo 'NewsController - actionIndex 2222';
+        echo 'NotesController - actionIndex2';
+        return true;
+    }
+
+    public function actionHome(){
+
+        echo 'NotesController - actionHome';
         return true;
     }
 
