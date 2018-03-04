@@ -6,11 +6,24 @@
  */
 
 
-require_once "Config.php";
 
 abstract class ShowNotes{
 
+    public static function index(){
 
+    require_once "../views/header.php";
+    require_once "ShowNotes.php";
+
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+
+    }
+
+
+    ShowNotes::printOne($id);
+
+    require_once "../views/footer.php";
+    }
 
     public static function printNote(){
 
@@ -197,6 +210,3 @@ abstract class ShowNotes{
 
 
 }
-
-
-?>

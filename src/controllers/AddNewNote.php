@@ -5,7 +5,7 @@
  * Date: 2.27.18 (19:06)
  */
 
-require_once "Config.php";
+require_once "../config/Config.php";
 require_once "ValidationForms.php";
 
 abstract class AddNewNote extends ValidationForms {
@@ -59,4 +59,3 @@ abstract class AddNewNote extends ValidationForms {
 
 
 AddNewNote::check_GET();
-?>

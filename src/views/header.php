@@ -1,5 +1,5 @@
 <?php
-    require_once "controllers/Config.php";
+    require_once "config/Config.php";
     require_once "controllers/Alert.php";
 ?>
 

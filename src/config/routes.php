@@ -7,6 +7,6 @@
 
 return array(
     'index.php' => 'notes/Home',
-    'notes.php' => 'notes/index',
+    'note.php' => 'ShowNotes/index',
     'edit.php' => 'EditNote/index',
 );
