@@ -6,9 +6,9 @@
  */
 
 require_once "../config/Config.php";
-require_once "ValidationForms.php";
+require_once "ValidationFormsController.php";
 
-abstract class NoteAddController extends ValidationForms {
+abstract class NoteAddController extends ValidationFormsController {
 
 
     public static function index(){
@@ -75,8 +75,8 @@ abstract class NoteAddController extends ValidationForms {
    static function AddNote(){
         $query = "INSERT INTO notes SET title=:title, text=:text, status=:status, dateTime=:dateTime";
 
-        $title = ValidationForms::Check("title");
-        $text =  ValidationForms::Check("text");
+        $title = ValidationFormsController::Check("title");
+        $text =  ValidationFormsController::Check("text");
 
         $status = "1";
         $dateTime = date('Y-m-d H:i:s');
