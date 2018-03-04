@@ -6,13 +6,13 @@
  */
 
 
-abstract class Alert{
+abstract class AlertController{
 
 
     public static function check(){
 
-        if (isset($_GET['alert'])) {
-            $status = $_GET['alert'];
+        if (isset($_GET['Alert'])) {
+            $status = $_GET['Alert'];
             self::setData($status);
         }
     }
