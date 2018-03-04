@@ -8,7 +8,7 @@
 require_once "../config/Config.php";
 require_once "ValidationForms.php";
 
-abstract class AddNoteController extends ValidationForms {
+abstract class NoteAddController extends ValidationForms {
 
 
     public static function index(){
@@ -27,7 +27,7 @@ abstract class AddNoteController extends ValidationForms {
     //
     //            <div class="row">
     //                <div class="col-lg-12">
-    //                    <form action="controllers/AddNoteController.phproller.php" method="post">
+    //                    <form action="controllers/NoteAddController.phproller.php" method="post">
     //                        <div class="form-group">
     //                            <input type="text" name='title' class="form-control" minlength="3" maxlength="75" placeholder="Enter your title of note" required >
     //                        </div>

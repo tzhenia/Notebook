@@ -7,12 +7,12 @@
 
 
 
-abstract class ShowNoteController{
+abstract class NoteShowController{
 
     public static function index(){
 
     require_once "../views/header.php";
-    require_once "ShowNoteController.php";
+    require_once "NoteShowController.php";
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
@@ -20,7 +20,7 @@ abstract class ShowNoteController{
     }
 
 
-    ShowNoteController::printOne($id);
+    NoteShowController::printOne($id);
 
     require_once "../views/footer.php";
     }
@@ -150,7 +150,7 @@ abstract class ShowNoteController{
                 
                                 <div class='form-group text-right'>
                                     <input type='hidden' name='id' value='$id'>
-                                    <a href='controller/DeleteNote.php?delete=$id' class='btn btn-danger'>Remove from database</a>
+                                    <a href='controller/NoteDeleteController.phproller.php?delete=$id' class='btn btn-danger'>Remove from database</a>
                                     <input type='submit' class='btn btn-success' value='UPDATE'>
                                 </div>
                             </form>
@@ -195,7 +195,7 @@ abstract class ShowNoteController{
                     <div class='col-xs-12 col-sm-9 col-md-10'><a href='note.php?id={$id}'><span>ID: {$id}</span> - {$dateTime} - {$title}</a></div>
                     <div class='col-xs-12 col-sm-3 col-md-2'>
                         <a href='edit.php?id={$id}' type='button' class='btn btn-warning'>Edit</a>
-                        <a href='controller/DeleteNote.php?id={$id}' type='button' class='btn btn-danger'>Delete</a>
+                        <a href='controller/NoteDeleteControllerController.php?id={$id}' type='button' class='btn btn-danger'>Delete</a>
                     </div>
                 </div>
              ";
