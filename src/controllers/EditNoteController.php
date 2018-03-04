@@ -17,7 +17,7 @@ class EditNoteController
 
     private static function printPage(){
         require_once "views/header.php";
-        require_once "ShowNotes.php";
+        require_once "ShowNoteController.php";
 
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
@@ -25,7 +25,7 @@ class EditNoteController
         }
 
 
-        ShowNotes::printOneEdit($id);
+        ShowNoteController::printOneEdit($id);
 
 
         require_once "views/requirementsNotes.php";

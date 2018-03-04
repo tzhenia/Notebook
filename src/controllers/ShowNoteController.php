@@ -7,12 +7,12 @@
 
 
 
-abstract class ShowNotes{
+abstract class ShowNoteController{
 
     public static function index(){
 
     require_once "../views/header.php";
-    require_once "ShowNotes.php";
+    require_once "ShowNoteController.php";
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
@@ -20,7 +20,7 @@ abstract class ShowNotes{
     }
 
 
-    ShowNotes::printOne($id);
+    ShowNoteController::printOne($id);
 
     require_once "../views/footer.php";
     }

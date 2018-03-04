@@ -12,7 +12,7 @@
 
 
     require_once "views/header.php";
-    require_once "controllers/ShowNotes.php";
+    require_once "controllers/ShowNoteController.php";
     require_once "controllers/Get.php";
 ?>
 
@@ -24,7 +24,7 @@
             <div class="col-xs-12"><h1>List of notes</h1></div>
         </div>
 
-        <?php ShowNotes::printNote(); ?>
+        <?php ShowNoteController::printNote(); ?>
 
     </div>
 
