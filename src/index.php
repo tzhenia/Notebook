@@ -11,24 +11,24 @@
 
 
 
-////    require_once "views/header.php";
-////    require_once "controllers/ShowNotes.php";
-////    require_once "controllers/Get.php";
-//?>
-<!---->
-<!--    <div class="container">-->
-<!---->
-<!--        --><?php //Alert::check(); ?>
-<!---->
-<!--        <div class="row title">-->
-<!--            <div class="col-xs-12"><h1>List of notes</h1></div>-->
-<!--        </div>-->
-<!---->
-<!--        --><?php //ShowNotes::printNote(); ?>
-<!---->
-<!--    </div>-->
-<!---->
-<!---->
+    require_once "views/header.php";
+    require_once "controllers/ShowNotes.php";
+    require_once "controllers/Get.php";
+?>
+
+    <div class="container">
+
+        <?php Alert::check(); ?>
+
+        <div class="row title">
+            <div class="col-xs-12"><h1>List of notes</h1></div>
+        </div>
+
+        <?php ShowNotes::printNote(); ?>
+
+    </div>
+
+
 <?php
-//    require_once "views/footer.php";
-//?>
+    require_once "views/footer.php";
+?>

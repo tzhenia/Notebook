@@ -6,7 +6,7 @@
  */
 
 return array(
-    '1' => 'notes/Home',
-    'notes' => 'notes/index',
-    'page2' => 'notes/index2',
+    'index.php' => 'notes/Home',
+    'notes.php' => 'notes/index',
+    'edit.php' => 'EditNote/index',
 );
