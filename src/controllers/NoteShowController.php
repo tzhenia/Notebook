@@ -5,8 +5,6 @@
  * Date: 3.1.18 (08:50)
  */
 
-include_once ROOT . '/models/Note.php';
-
 class NoteShowController{
 
     public function actionIndex(){
@@ -14,9 +12,7 @@ class NoteShowController{
        $notesList = array();
        $notesList = Note::getNoteList();
 
-       echo '<pre>';
-         print_r($notesList);
-       echo '</pre>';
+       require_once ROOT . '/views/pages/homePage.php';
 
         return true;
 
