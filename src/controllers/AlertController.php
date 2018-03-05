@@ -32,7 +32,7 @@ abstract class AlertController{
 
 
    private static function printAlert($text, $label){
-        echo "<div class='row'><div class='col-xs-12'><div class='alert alert-" . $label ."'>" . $text . "</div></div></div>";
+        echo "";
     }
 
 }
