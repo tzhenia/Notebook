@@ -13,7 +13,15 @@ class Db
         $paramsPath = ROOT . '/config/db_config.php';
         $params = include ($paramsPath);
 
-        $db = new PDO($params['dsn'], $params['user'], $params['pass']);
+        try {
+            $db = new PDO($params['dsn'], $params['user'], $params['pass']);
+        }
+
+        catch(PDOException $exception){
+            echo "Connection error: " . $exception->getMessage();
+        }
+
+
 
         return $db;
     }

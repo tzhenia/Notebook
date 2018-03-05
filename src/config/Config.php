@@ -5,7 +5,6 @@
  * Date: 2.27.18 (15:12)
  */
 
-date_default_timezone_set('Europe/Kiev');
 
 abstract class Config {
 
