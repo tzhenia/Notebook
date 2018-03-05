@@ -10,7 +10,7 @@ class Db
 
     public static function getConnection(){
 
-        $paramsPath = ROOT . '/config/db_config.php';
+        $paramsPath = ROOT . '/config/db.php';
         $params = include ($paramsPath);
 
         try {
@@ -20,8 +20,6 @@ class Db
         catch(PDOException $exception){
             echo "Connection error: " . $exception->getMessage();
         }
-
-
 
         return $db;
     }

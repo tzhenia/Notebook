@@ -15,7 +15,7 @@ class NoteAddController extends ValidationFormsController {
 
 
 
-    require_once (ROOT . "/views/header.php");
+    require_once(ROOT . "/views/header.php");
 
 
     echo'
@@ -46,8 +46,8 @@ class NoteAddController extends ValidationFormsController {
 
         ';
 
-        require_once (ROOT . "/views/requirementsNotes.php");
-        require_once (ROOT . "/views/footer.php");
+        require_once(ROOT . "/views/requirementsNotes.php");
+        require_once(ROOT . "/views/footer.php");
     }
 
 
