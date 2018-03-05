@@ -6,6 +6,10 @@
  */
 
 return array(
+
+    'note.php?id=([0-9]+)' => 'NoteShow/index',
+
+
     'index.php' => 'NoteShow/Home',
     'note.php' => 'NoteShow/index',
     'edit.php' => 'NoteEdit/index',
