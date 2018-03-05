@@ -5,7 +5,7 @@
  * Date: 3.5.18 (14:29)
  */
 
-include_once '../models/Db.php';
+include_once ROOT . '/models/Db.php';
 
 abstract class Note{
 
