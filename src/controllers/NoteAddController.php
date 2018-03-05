@@ -27,7 +27,7 @@ class NoteAddController extends ValidationFormsController {
     
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="controllers/NoteAddController.phproller.php" method="post">
+                        <form action="#" method="post">
                             <div class="form-group">
                                 <input type="text" name="title" class="form-control" minlength="3" maxlength="75" placeholder="Enter your title of note" required >
                             </div>
