@@ -5,19 +5,14 @@
  * Date: 3.5.18 (14:29)
  */
 
+include_once '../models/Db.php';
 
 abstract class Note{
 
 
     public static function getNoteItemById($id){
 
-        $host = 'phpmyadmin.loc';
-        $db_name = 'NoteBook';
-        $user = 'homestead';
-        $pass = 'secret';
-        $dsn = "mysql:host=$host;dbname=$db_name";
-
-        $db = new PDO($dsn, $user, $pass);
+        $db = Db::getConnection();
 
         $result = $db->query(
             'SELECT * '
@@ -31,21 +26,12 @@ abstract class Note{
 
         $notesItem = $result->fetch();
 
-
         return $notesItem;
-
-
     }
 
     public static function getNoteList(){
 
-        $host = 'phpmyadmin.loc';
-        $db_name = 'NoteBook';
-        $user = 'homestead';
-        $pass = 'secret';
-        $dsn = "mysql:host=$host;dbname=$db_name";
-
-        $db = new PDO($dsn, $user, $pass);
+        $db = Db::getConnection();
 
         $notesList = array();
 
@@ -72,6 +58,5 @@ abstract class Note{
 
         return $notesList;
     }
-
 
 }
