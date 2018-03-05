@@ -31,17 +31,17 @@ class Router{
 
             if(preg_match("~$uriPattern~", $uri)){
 
-                $segments = explode('/', $path);
 
                 $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+
+                $segments = explode('/', $internalRoute);
 
                 $controllerName = array_shift($segments).'Controller';
                 $controllerName = ucfirst($controllerName);
 
                 $actionName = 'action'.ucfirst(array_shift($segments));
 
-                $parametres = $segments;
-                print_r($parametres);
+                $param = $segments;
 
                 $controllerFile =  ROOT . '/controllers/' . $controllerName . '.php';
 
@@ -50,7 +50,8 @@ class Router{
                 }
 
                 $controllerObject = new $controllerName;
-                $result = $controllerObject->$actionName();
+
+                $result = call_user_func_array(array($controllerObject, $actionName), $param);
 
                 if ($result != null){
                     break;

@@ -10,8 +10,16 @@ class NoteShowController{
 
     public function actionIndex(){
 
-        echo "NoteShowController - actionIndex";
+        echo "<br> <br>  NoteShowController - actionIndex";
+        return true;
 
+    }
+
+    public function actionView($id){
+
+        echo "<br> <br> NoteShowController - actionView";
+        echo '<br>' . $id;
+        return true;
     }
 
 

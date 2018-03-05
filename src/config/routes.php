@@ -6,12 +6,15 @@
  */
 
 return array(
+    'note/([0-9]+)' => 'noteShow/view/$1',
+    'note' => 'noteShow/index',
 
-    '/([a-z]+)/([0-9]+)' => 'noteShow/view/$1',
 
+  //  '/note/([0-9]+)' => 'noteShow/view/$1',
+  //  'note' => 'noteShow/index',
 
-    'index.php' => 'NoteShow/Home',
-    'edit.php' => 'NoteEdit/index',
-    'new.php' => 'NoteAdd/index',
+//    'index.php' => 'noteShow/Home',
+//    'edit.php' => 'noteEdit/index',
+//    'new.php' => 'noteAdd/index',
 
 );
