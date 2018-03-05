@@ -5,20 +5,32 @@
  * Date: 3.1.18 (08:50)
  */
 
+include_once ROOT . '/models/Note.php';
 
 class NoteShowController{
 
     public function actionIndex(){
 
-        echo "<br> <br>  NoteShowController - actionIndex";
+       $notesList = array();
+       $notesList = Note::getNoteList();
+
+       echo '<pre>';
+       print_r($notesList);
+       echo '</pre>';
+
         return true;
 
     }
 
     public function actionView($id){
 
+        $noteItem = Note::getNoteItemById($id);
+
+        echo '<pre>';
+        print_r($noteItem);
+        echo '</pre>';
+
         echo "<br> <br> NoteShowController - actionView";
-        echo '<br>' . $id;
         return true;
     }
 
