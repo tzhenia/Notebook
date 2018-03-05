@@ -7,7 +7,37 @@
 
 
 
-abstract class NoteShowController{
+class NoteShowController{
+
+
+    public static function  actionHome(){
+
+        require_once (ROOT . "/views/header.php");
+        require_once "NoteShowController.php";
+        require_once "Get.php";
+
+
+        echo  '<div class="container">';
+
+            AlertController::check();
+
+        echo '   
+               <div class="row title">
+                     <div class="col-xs-12"><h1>List of notes</h1></div>
+               </div>';
+
+             NoteShowController::printNote();
+
+
+        echo  '</div>';
+
+
+
+
+        require_once (ROOT . "/views/footer.php");
+
+
+    }
 
     public static function index(){
 

@@ -6,9 +6,9 @@
  */
 
 return array(
-    'index.php' => 'notes/Home',
+    'index.php' => 'NoteShow/Home',
     'note.php' => 'NoteShow/index',
     'edit.php' => 'NoteEdit/index',
-    'new.php' => 'AddNote/index',
+    'new.php' => 'NoteAdd/index',
 
 );
