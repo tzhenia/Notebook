@@ -7,11 +7,10 @@
 
 return array(
 
-    'note.php?id=([0-9]+)' => 'NoteShow/index',
+    '/([a-z]+)/([0-9]+)' => 'noteShow/view/$1',
 
 
     'index.php' => 'NoteShow/Home',
-    'note.php' => 'NoteShow/index',
     'edit.php' => 'NoteEdit/index',
     'new.php' => 'NoteAdd/index',
 

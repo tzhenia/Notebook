@@ -33,10 +33,15 @@ class Router{
 
                 $segments = explode('/', $path);
 
+                $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+
                 $controllerName = array_shift($segments).'Controller';
                 $controllerName = ucfirst($controllerName);
 
                 $actionName = 'action'.ucfirst(array_shift($segments));
+
+                $parametres = $segments;
+                print_r($parametres);
 
                 $controllerFile =  ROOT . '/controllers/' . $controllerName . '.php';
 
