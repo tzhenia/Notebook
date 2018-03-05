@@ -15,7 +15,7 @@ class NoteShowController{
        $notesList = Note::getNoteList();
 
        echo '<pre>';
-       print_r($notesList);
+         print_r($notesList);
        echo '</pre>';
 
         return true;
