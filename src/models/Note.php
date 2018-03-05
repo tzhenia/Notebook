@@ -9,6 +9,22 @@ include_once ROOT . '/models/Db.php';
 
 abstract class Note{
 
+    public static function checkNoteItem(){
+
+        $db = Db::getConnection();
+
+        $result = $db->query(
+            'SELECT id '
+            . 'FROM notes '
+            . 'LIMIT 1'
+        );
+
+        $result -> setFetchMode(PDO::FETCH_ASSOC);
+
+        $notesItem = $result->fetch();
+
+        return $notesItem;
+    }
 
     public static function getNoteItemById($id){
 
@@ -21,8 +37,6 @@ abstract class Note{
         );
 
         $result -> setFetchMode(PDO::FETCH_ASSOC);
-
-        $i = 0;
 
         $notesItem = $result->fetch();
 

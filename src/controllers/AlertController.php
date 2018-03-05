@@ -6,10 +6,10 @@
  */
 
 
-abstract class AlertController{
+class AlertController{
 
 
-    public static function check(){
+    public static function actionCheck(){
 
         if (isset($_GET['Alert'])) {
             $status = $_GET['Alert'];
@@ -31,8 +31,10 @@ abstract class AlertController{
     }
 
 
-   private static function printAlert($text, $label){
-        echo "";
-    }
+    private static function printAlert($label, $text){
+
+
+
+        }
 
 }

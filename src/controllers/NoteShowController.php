@@ -9,13 +9,24 @@ class NoteShowController{
 
     public function actionIndex(){
 
-       $notesList = array();
-       $notesList = Note::getNoteList();
+       $checkNoteItem = Note::checkNoteItem();
 
-       require_once ROOT . '/views/pages/homePage.php';
+       if($checkNoteItem){
 
-        return true;
+           $notesList = array();
+           $notesList = Note::getNoteList();
 
+           require_once ROOT . '/views/pages/homePage.php';
+
+       }
+
+       else{
+
+           // redirect to Home page
+
+       }
+
+       return true;
     }
 
     public function actionView($id){
@@ -261,9 +272,6 @@ class NoteShowController{
 //
 //    }
 //
-//    private static function printNUN(){
-//        echo "<div class='alert alert-danger'>No records found.</div>";
-//    }
 //
 //
 //}
