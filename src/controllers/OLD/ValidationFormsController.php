@@ -5,7 +5,7 @@
  * Date: 2.28.18 (20:00)
  */
 
-abstract class ValidationForms{
+abstract class ValidationFormsController{
 
     protected static function check($value){
        return $value = htmlspecialchars(strip_tags($_POST[$value]));

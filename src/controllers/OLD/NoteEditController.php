@@ -6,9 +6,9 @@
  */
 
 require_once "Config.php";
-require_once "ValidationForms.php";
+require_once "ValidationFormsController.php";
 
-class EditNote extends ValidationForms{
+class NoteEditController extends ValidationFormsController{
 
     public static function check_GET(){
 
@@ -34,8 +34,8 @@ class EditNote extends ValidationForms{
         $id = $_POST['id'];
         $query = "UPDATE notes SET title=:title, text=:text, status=:status, dateTime=:dateTime WHERE id=" . $id;
 
-        $title = ValidationForms::Check("title");
-        $text =  ValidationForms::Check("text");
+        $title = ValidationFormsController::Check("title");
+        $text =  ValidationFormsController::Check("text");
 
         $status = "1";
         $dateTime = date('Y-m-d H:i:s');

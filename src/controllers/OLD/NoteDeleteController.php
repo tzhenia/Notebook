@@ -9,17 +9,17 @@ require_once "Config.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    DeleteNote::hideNote($id);
+    NoteDeleteController::hideNote($id);
 }
 
 else if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    DeleteNote::removeForever($id);
+    NoteDeleteController::removeForever($id);
 }
 
 
 
-class DeleteNote{
+class NoteDeleteController{
 
     public static function hideNote($id){
 

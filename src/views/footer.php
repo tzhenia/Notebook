@@ -1,7 +1,7 @@
         <footer class="container">
             <div class="row">
                 <div class="col-xs-3">
-                    <a href="<?php echo Config::ROOT?>" class="logo-footer">Notebook</a>
+                    <a href="<?php echo ROOT?>/index.php" class="logo-footer">Notebook</a>
                 </div>
 
                 <div class="text-right copyright col-xs-9">
