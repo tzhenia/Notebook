@@ -2,27 +2,44 @@
 /**
  * User: Yevhenii Taranukha
  * Contacts: tzhenia.com
- * Date: 2.27.18 (19:06)
+ * Date: 3.2.18 (13:54)
  */
 
-class NoteNewController{
 
+class NoteEditController
+{
 
-    public static function actionIndex(){
-        require_once ROOT . "/views/pages/noteNew.php";
+    public static function actionIndex($id)
+    {
+        $checkNoteItem = Note::checkNoteById($id);
+
+        if($checkNoteItem){
+
+            $noteItem = array();
+            $noteItem = Note::getNoteItemById($id);
+
+            require_once ROOT . '/views/pages/noteEdit.php';
+        }
+
+        else{
+            // redirect to Home page
+        }
 
         return true;
     }
 
+}
 
-//
+
+
+//class NoteEditController extends ValidationFormsController{
 //
 //    public static function check_GET(){
 //
 //        if($_POST){
 //
 //            try{
-//                self::AddNote();
+//                self::updateNote();
 //            }
 //
 //            catch(PDOException $exception){
@@ -37,8 +54,9 @@ class NoteNewController{
 //    }
 //
 //
-//   static function AddNote(){
-//        $query = "INSERT INTO notes SET title=:title, text=:text, status=:status, dateTime=:dateTime";
+//    private static function updateNote(){
+//        $id = $_POST['id'];
+//        $query = "UPDATE notes SET title=:title, text=:text, status=:status, dateTime=:dateTime WHERE id=" . $id;
 //
 //        $title = ValidationFormsController::Check("title");
 //        $text =  ValidationFormsController::Check("text");
@@ -51,15 +69,16 @@ class NoteNewController{
 //        $stmt->bindParam(':title', $title);
 //        $stmt->bindParam(':text', $text);
 //        $stmt->bindParam(':status', $status);
+//        //$stmt->bindParam(':id', $id);
 //
 //
 //        if($stmt->execute()){
-//            header("location: " . Config::ROOT . "/index.php?alert=saved");
+//           header("location: " . Config::ROOT . "/index.php?alert=saved");
 //        }
 //
 //        else{
-//            header("location: " . Config::ROOT . "/index.php?alert=unable");
+//           header("location: " . Config::ROOT . "/index.php?alert=unable");
 //        }
 //    }
-
-}
+//
+//}
