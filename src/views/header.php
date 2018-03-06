@@ -16,11 +16,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="nav">
-                        <li><a href="index.php" class="logo hidden-xs">Notebook</a></li>
-                        <li><a href="index.php" class="logo visible-xs">NB</a></li>
-                        <li><a href="index.php">Home</a></li>
+                        <li><a href="/note/index" class="logo hidden-xs">Notebook</a></li>
+                        <li><a href="/note/index" class="logo visible-xs">NB</a></li>
+                        <li><a href="/note/index">Home</a></li>
                         <li><a href="index.php?show=all">All notes</a></li>
-                        <li><a href="new.php">Add new</a></li>
+                        <li><a href="/new/">Add new</a></li>
                     </ul>
                 </div>
             </div>
