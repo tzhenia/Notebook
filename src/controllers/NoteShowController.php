@@ -64,4 +64,13 @@ class NoteShowController{
         return true;
     }
 
+    public function statusConvert($status){
+
+        if ($status=="0"){
+             return $status = "deleted";
+        }
+
+        return $status = "";
+    }
+
 }

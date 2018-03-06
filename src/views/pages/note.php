@@ -8,11 +8,13 @@
 
 require_once ROOT . "/views/header.php";
 
+$status = $noteItem['status'];
+$status = NoteShowController::statusConvert($status);
 
 echo "
                 <div class='container'>
                     <div class='row'>
-                        <div class='col-sm-9'><h1>ID: {$noteItem['id']} - {$noteItem['title']} <small>{$noteItem['status']}</small></h1></div>
+                        <div class='col-sm-9'><h1>ID: {$noteItem['id']} - {$noteItem['title']} <small>$status</small></h1></div>
                         <div class='col-sm-3'><p class='date text-right'>{$noteItem['dateTime']}</p></div>
                     </div>
                     <div class='row'>
