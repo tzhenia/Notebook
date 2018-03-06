@@ -17,16 +17,32 @@ class NoteShowController{
            $notesList = Note::getNoteList();
 
            require_once ROOT . '/views/pages/homePage.php';
-
        }
 
        else{
-
            // redirect to Home page
-
        }
 
        return true;
+    }
+
+    public function actionIndexAll(){
+
+        $checkNoteItem = Note::checkNoteItem();
+
+        if($checkNoteItem){
+
+            $notesList = array();
+            $notesList = Note::getNoteListAll();
+
+            require_once ROOT . '/views/pages/homePage.php';
+        }
+
+        else{
+            // redirect to Home page
+        }
+
+        return true;
     }
 
 

@@ -46,7 +46,35 @@ abstract class Note{
 
         $db = Db::getConnection();
 
+        $result = $db->query(
+            'SELECT id, title, status, dateTime '
+            . 'FROM notes '
+            . 'WHERE status = 1 '
+            . 'ORDER BY ID DESC'
+        );
+
+
+        $i = 0;
         $notesList = array();
+
+        while($row = $result->fetch()){
+
+            $notesList[$i]['id'] = $row ['id'];
+            $notesList[$i]['title'] = $row ['title'];
+            $notesList[$i]['status'] = $row ['status'];
+            $notesList[$i]['dateTime'] = $row ['dateTime'];
+
+            $i++;
+
+        }
+
+
+        return $notesList;
+    }
+
+    public static function getNoteListAll(){
+
+        $db = Db::getConnection();
 
         $result = $db->query(
             'SELECT id, title, status, dateTime '
@@ -56,6 +84,7 @@ abstract class Note{
 
 
         $i = 0;
+        $notesList = array();
 
         while($row = $result->fetch()){
 
