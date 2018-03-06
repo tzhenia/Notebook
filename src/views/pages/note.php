@@ -27,7 +27,7 @@ echo "
 
                     <div class='row'>
                         <div class='col-xs-12 text-right'>
-                            <a href='{$noteItem['id']}' type='button' class='btn btn-warning'>Edit</a>
+                            <a href='/edit/{$noteItem['id']}' type='button' class='btn btn-warning'>Edit</a>
                         </div>
                     </div>
                  </div>
