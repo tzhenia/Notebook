@@ -6,6 +6,7 @@
  */
 
 return array(
+    'new' => 'noteNew/index',
     'note/([0-9]+)' => 'noteShow/view/$1',
     'note' => 'noteShow/index',
 );

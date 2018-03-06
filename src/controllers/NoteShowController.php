@@ -29,6 +29,7 @@ class NoteShowController{
        return true;
     }
 
+
     public function actionView($id){
 
         $noteItem = Note::getNoteItemById($id);
@@ -231,47 +232,6 @@ class NoteShowController{
 //
 //    }
 //
-//    private static function printAll($showAll){
-//
-//        if ($showAll){
-//            $query = "SELECT * FROM notes ORDER BY id DESC";
-//        }
-//
-//        else{
-//            $query = "SELECT * FROM notes WHERE status = 1 ORDER BY id DESC";
-//        }
-//
-//
-//        $stmt = Config::get_db_connect()->prepare($query);
-//        $stmt->execute();
-//
-//        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-//
-//            extract($row);
-//
-//
-//            if ($status==1){
-//                echo "<div class='row note'>";
-//            }
-//
-//            else if ($status==0){
-//                echo "<div class='row note deleted'>";
-//            }
-//
-//            echo "
-//
-//                    <div class='col-xs-12 col-sm-9 col-md-10'><a href='note/{$id}'><span>ID: {$id}</span> - {$dateTime} - {$title}</a></div>
-//                    <div class='col-xs-12 col-sm-3 col-md-2'>
-//                        <a href='edit.php?id={$id}' type='button' class='btn btn-warning'>Edit</a>
-//                        <a href='{$id}' type='button' class='btn btn-danger'>Delete</a>
-//                    </div>
-//                </div>
-//             ";
-//
-//        }
-//
-//    }
-//
-//
+
 //
 //}
