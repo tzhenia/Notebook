@@ -25,6 +25,24 @@ abstract class Note{
         return $notesItem;
     }
 
+    public static function checkNoteById($id){
+
+        $db = Db::getConnection();
+
+        $result = $db->query(
+            'SELECT id '
+            . 'FROM notes '
+            . 'WHERE id = ' . $id . ' '
+            . 'LIMIT 1'
+        );
+
+        $result -> setFetchMode(PDO::FETCH_ASSOC);
+
+        $notesItem = $result->fetch();
+
+        return $notesItem;
+    }
+
     public static function getNoteItemById($id){
 
         $db = Db::getConnection();
