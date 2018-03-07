@@ -27,14 +27,14 @@ echo "
 
                     <div class='row'>
                         <div class='col-xs-12 text-right'>
-                            <a href='/edit/{$noteItem['id']}' type='button' class='btn btn-warning'>Edit</a>
+                            
 ";
-                            if (!$status=="deleted"){
+                            if ($status != "deleted"){
                             echo "<a href='/hide/{$noteItem ['id']}' type='button' class='btn btn-danger'>Hide</a>";
                             }
 
 echo "                            
-                            
+                           <a href='/edit/{$noteItem['id']}' type='button' class='btn btn-warning'>Edit</a> 
                         </div>
                     </div>
                  </div>

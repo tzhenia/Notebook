@@ -30,14 +30,16 @@ foreach($notesList as $field){
     echo "
         <div class='col-xs-12 col-sm-9 col-md-10'><a href='{$field ['id']}'><span>ID: {$field ['id']}</span> - {$field ['dateTime']} - {$field ['title']}</a></div>
             <div class='col-xs-12 col-sm-3 col-md-2'>
-                <a href='/edit/{$field ['id']}' type='button' class='btn btn-warning'>Edit</a>
-                <a href='/hide/{$field ['id']}' type='button' class='btn btn-danger'>Hide</a>
+         ";
+
+                if ($field['status'] != 0){echo "<a href='/hide/{$field ['id']}' type='button' class='btn btn-danger'>Hide</a>";}
+
+    echo "  
+                <a href='/edit/{$field ['id']}' type='button' class='btn btn-warning'>Edit</a> 
              </div>
-        </div>
-       
-    ";
+        </div>";
 }
 
-echo "</div> ";
+echo "</div>";
 
 require_once ROOT . "/views/footer.php";
