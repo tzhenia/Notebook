@@ -13,7 +13,7 @@ class NoteDeleteController{
 
         if($checkNoteItem){
 
-            echo "hide";
+            echo "hide" . $id;
         }
 
         else{
@@ -23,13 +23,13 @@ class NoteDeleteController{
         return true;
     }
 
-    public static function actionFinally($id){
+    public static function actionDelete($id){
 
         $checkNoteItem = Note::checkNoteById($id);
 
         if($checkNoteItem){
 
-            echo "actionFinally";
+            echo "actionDelete" . $id;
         }
 
         else{

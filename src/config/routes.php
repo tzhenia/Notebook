@@ -12,8 +12,8 @@ return array(
     'new' => 'noteNew/index',
     'edit/([0-9]+)' => 'noteEdit/index/$1',
 
-    'delete/([0-9]+)' => 'noteDelete/hide/$1',
-    'delete/finally/([0-9]+)' => 'noteDelete/finally/$1',
+    'hide/([0-9]+)' => 'noteDelete/hide/$1',
+    'delete/([0-9]+)' => 'noteDelete/delete/$1',
 
     'note/([0-9]+)' => 'noteShow/view/$1',
     'note/all' => 'noteShow/indexAll',
