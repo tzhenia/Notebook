@@ -28,7 +28,7 @@ echo "
 
                                 <div class='form-group text-right'>
                                     <input type='hidden' name='id' value='{$noteItem['id']}'>
-                                    <a href='{$noteItem['id']}' class='btn btn-danger'>Remove from database</a>
+                                    <a href='/delete/{$noteItem ['id']}' class='btn btn-danger'>Remove from database</a>
                                     <input type='submit' class='btn btn-success' value='UPDATE'>
                                 </div>
                             </form>

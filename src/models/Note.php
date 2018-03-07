@@ -60,6 +60,39 @@ abstract class Note{
         return $notesItem;
     }
 
+    public static function hideNoteItemById($id){
+
+        $db = Db::getConnection();
+
+        $result = $db->query(
+            'UPDATE notes '
+            . 'SET status = 0 '
+            . 'WHERE id='. $id
+        );
+
+        $result -> setFetchMode(PDO::FETCH_ASSOC);
+
+        $notesItem = $result->fetch();
+
+        return $notesItem;
+    }
+
+    public static function deleteNoteItemById($id){
+
+        $db = Db::getConnection();
+
+        $result = $db->query(
+            'DELETE FROM notes '
+            . 'WHERE id='. $id
+        );
+
+        $result -> setFetchMode(PDO::FETCH_ASSOC);
+
+        $notesItem = $result->fetch();
+
+        return $notesItem;
+    }
+
     public static function getNoteList(){
 
         $db = Db::getConnection();

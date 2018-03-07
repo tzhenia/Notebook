@@ -28,6 +28,7 @@ echo "
                     <div class='row'>
                         <div class='col-xs-12 text-right'>
                             <a href='/edit/{$noteItem['id']}' type='button' class='btn btn-warning'>Edit</a>
+                            <a href='/hide/{$noteItem ['id']}' type='button' class='btn btn-danger'>Hide</a>
                         </div>
                     </div>
                  </div>

@@ -31,7 +31,7 @@ foreach($notesList as $field){
         <div class='col-xs-12 col-sm-9 col-md-10'><a href='{$field ['id']}'><span>ID: {$field ['id']}</span> - {$field ['dateTime']} - {$field ['title']}</a></div>
             <div class='col-xs-12 col-sm-3 col-md-2'>
                 <a href='/edit/{$field ['id']}' type='button' class='btn btn-warning'>Edit</a>
-                <a href='{$field ['id']}' type='button' class='btn btn-danger'>Delete</a>
+                <a href='/hide/{$field ['id']}' type='button' class='btn btn-danger'>Hide</a>
              </div>
         </div>
        
