@@ -13,7 +13,8 @@ class NoteDeleteController{
 
         if($checkNoteItem){
 
-            echo "hide" . $id;
+            Note::hideNoteItemById($id);
+            RedirectController::redirectToHome();
         }
 
         else{
@@ -29,7 +30,8 @@ class NoteDeleteController{
 
         if($checkNoteItem){
 
-            echo "actionDelete" . $id;
+            Note::deleteNoteItemById($id);
+            RedirectController::redirectToHome();
         }
 
         else{
