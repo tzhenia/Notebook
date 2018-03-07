@@ -9,32 +9,23 @@
 class AlertController{
 
 
-    public static function actionCheck(){
+    public static function actionNull(){
 
-        if (isset($_GET['Alert'])) {
-            $status = $_GET['Alert'];
-            self::setData($status);
+        $checkNoteItem = Note::checkNoteItem();
+
+        if($checkNoteItem){
+
+            RedirectController::redirectToHome();
         }
+
+        require_once ROOT . '/views/pages/homeNull.php';
+
+        return true;
     }
 
+    public static function printAlert($label, $text){
 
-    private static function setData($status){
-
-        if($status == "saved"){
-            self::printAlert("Record was saved.", "success");
-        }
-
-        else if($status == "unable"){
-            self::printAlert("Unable to save record.", "danger");
-        }
-
+        require_once ROOT . "/views/alert.php";
     }
-
-
-    private static function printAlert($label, $text){
-
-
-
-        }
 
 }

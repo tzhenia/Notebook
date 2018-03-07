@@ -20,10 +20,10 @@ class NoteShowController{
        }
 
        else{
-           // redirect to Home page
+           RedirectController::redirectToHomeWithAlertNull();
        }
 
-       return true;
+        return true;
     }
 
     public function actionIndexAll(){
@@ -39,10 +39,11 @@ class NoteShowController{
         }
 
         else{
-            // redirect to Home page
+            RedirectController::redirectToHomeWithAlertNull();
         }
 
         return true;
+
     }
 
     public function actionView($id){
@@ -58,7 +59,7 @@ class NoteShowController{
         }
 
         else{
-            // redirect to Home page
+            RedirectController::redirectToHome();
         }
 
         return true;
