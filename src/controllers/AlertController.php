@@ -6,13 +6,13 @@
  */
 
 
-abstract class Alert{
+class AlertController{
 
 
-    public static function check(){
+    public static function actionCheck(){
 
-        if (isset($_GET['alert'])) {
-            $status = $_GET['alert'];
+        if (isset($_GET['Alert'])) {
+            $status = $_GET['Alert'];
             self::setData($status);
         }
     }
@@ -31,8 +31,10 @@ abstract class Alert{
     }
 
 
-   private static function printAlert($text, $label){
-        echo "<div class='row'><div class='col-xs-12'><div class='alert alert-" . $label ."'>" . $text . "</div></div></div>";
-    }
+    private static function printAlert($label, $text){
+
+
+
+        }
 
 }
