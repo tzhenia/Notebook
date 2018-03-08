@@ -20,7 +20,10 @@ class NoteNewController{
         $title = $_POST["title"];
         $text = $_POST["text"];
         $status = 1;
-        $dateTime = date('Y-m-d H:i:s');
+
+        $now = new DateTime();
+        $now->setTimezone(new DateTimeZone('Europe/Kiev'));
+        $dateTime = $now->format('Y-m-d H:i:s');
 
         $title = ValidationFormsController::clear($title, "text");
         $text = ValidationFormsController::clear($text, "textarea");
