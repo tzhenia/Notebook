@@ -37,4 +37,5 @@ echo "
 
     ";
 
+require_once ROOT . "/views/requirementsNotes.php";
 require_once ROOT . "/views/footer.php";
