@@ -15,7 +15,7 @@ echo '
     
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="#" method="post">
+                        <form action="/new/save/" method="post">
                             <div class="form-group">
                                 <input type="text" name="title" class="form-control" minlength="3" maxlength="75" placeholder="Title" required >
                             </div>

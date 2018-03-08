@@ -152,4 +152,20 @@ abstract class Note{
         return $notesList;
     }
 
+    public static function addNew($title, $text, $status, $dateTime){
+
+        $db = Db::getConnection();
+
+        $query = "INSERT INTO notes SET title=:title, text=:text, status=:status, dateTime=:dateTime";
+
+        $stmt = $db->prepare($query);
+
+        $stmt->bindParam(':dateTime', $dateTime);
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':text', $text);
+        $stmt->bindParam(':status', $status);
+
+        $stmt->execute();
+    }
+
 }
