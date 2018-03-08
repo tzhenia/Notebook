@@ -9,7 +9,9 @@ return array(
 
     'null' => 'alert/null',
 
+    'new/save' => 'noteNew/save/',
     'new' => 'noteNew/index',
+
     'edit/([0-9]+)' => 'noteEdit/index/$1',
 
     'hide/([0-9]+)' => 'noteDelete/hide/$1',

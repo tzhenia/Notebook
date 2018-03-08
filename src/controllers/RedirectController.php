@@ -12,10 +12,14 @@ abstract class RedirectController
         header('Location: ' . SITE_NAME . 'null/');
     }
 
-
     public static function redirectToHome(){
 
         header('Location: ' . SITE_NAME . 'note/');
+    }
+
+    public static function redirectToAddForm(){
+
+        header('Location: ' . SITE_NAME . 'new/');
     }
 
 }
