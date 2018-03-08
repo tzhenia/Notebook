@@ -43,6 +43,23 @@ abstract class Note{
         return $notesItem;
     }
 
+    public static function editNoteById($id, $title, $text, $status, $dateTime){
+
+        $db = Db::getConnection();
+
+        $query = "UPDATE notes SET title=:title, text=:text, status=:status, dateTime=:dateTime WHERE id=" . $id;
+
+        $stmt = $db->prepare($query);
+
+        //$stmt->bindParam(':id', $id);
+        $stmt->bindParam(':dateTime', $dateTime);
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':text', $text);
+        $stmt->bindParam(':status', $status);
+
+        $stmt->execute();
+    }
+
     public static function getNoteItemById($id){
 
         $db = Db::getConnection();
@@ -60,21 +77,19 @@ abstract class Note{
         return $notesItem;
     }
 
-    public static function hideNoteItemById($id){
+    public static function hideNoteItemById($id)
+    {
 
         $db = Db::getConnection();
 
         $result = $db->query(
             'UPDATE notes '
             . 'SET status = 0 '
-            . 'WHERE id='. $id
+            . 'WHERE id=' . $id
         );
 
-        $result -> setFetchMode(PDO::FETCH_ASSOC);
-
-        $notesItem = $result->fetch();
-
-        return $notesItem;
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->fetch();
     }
 
     public static function deleteNoteItemById($id){
