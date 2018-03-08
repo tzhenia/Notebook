@@ -22,7 +22,7 @@ class NoteEditController
         }
 
         else{
-            // redirect to Home page
+            RedirectController::redirectToHome();
         }
 
         return true;

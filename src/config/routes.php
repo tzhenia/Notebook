@@ -12,6 +12,7 @@ return array(
     'new/save' => 'noteNew/save/',
     'new' => 'noteNew/index',
 
+    'edit/save/([0-9]+)' => 'noteEdit/save/$1',
     'edit/([0-9]+)' => 'noteEdit/index/$1',
 
     'hide/([0-9]+)' => 'noteDelete/hide/$1',
