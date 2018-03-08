@@ -14,10 +14,9 @@ echo "
                     <div class='row title'>
                         <div class='col-xs-12'><h1>Edit ID: {$noteItem['id']}</h1></div>
                     </div>
-
                     <div class='row'>
                         <div class='col-lg-12'>
-                            <form action='#' method='post'>
+                            <form action='/edit/save/{$noteItem['id']}' method='post'>
                                 <div class='form-group'>
                                     <input type='text' name='title'  class='form-control' minlength='3' maxlength='75' value='{$noteItem['title']}' required >
                                 </div>
@@ -38,4 +37,5 @@ echo "
 
     ";
 
+require_once ROOT . "/views/requirementsNotes.php";
 require_once ROOT . "/views/footer.php";
