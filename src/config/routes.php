@@ -19,7 +19,7 @@ return array(
     'delete/([0-9]+)' => 'noteDelete/delete/$1',
 
     'note/([0-9]+)' => 'noteShow/view/$1',
-    'note/all' => 'noteShow/indexAll',
-    'note' => 'noteShow/index',
+    'all' => 'noteShow/indexAll',
+    '^$' => 'noteShow/index',
 
 );

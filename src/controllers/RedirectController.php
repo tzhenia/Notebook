@@ -14,7 +14,7 @@ abstract class RedirectController
 
     public static function redirectToHome(){
 
-        header('Location: ' . SITE_NAME . 'note/');
+        header('Location: ' . SITE_NAME);
     }
 
     public static function redirectToAddForm(){
