@@ -5,7 +5,7 @@
  * Date: 3.5.18 (23:44)
  */
 
-require_once ROOT . "/views/header.php";
+require_once ROOT . "/views/layout/header.php";
 
 
 
@@ -28,7 +28,7 @@ foreach($notesList as $field){
     }
 
     echo "
-        <div class='col-xs-12 col-sm-9 col-md-10'><a href='{$field ['id']}'><span>ID: {$field ['id']}</span> - {$field ['dateTime']} - {$field ['title']}</a></div>
+        <div class='col-xs-12 col-sm-9 col-md-10'><a href='/note/{$field ['id']}'><span>ID: {$field ['id']}</span> - {$field ['dateTime']} - {$field ['title']}</a></div>
             <div class='col-xs-12 col-sm-3 col-md-2'>
          ";
 
@@ -42,4 +42,4 @@ foreach($notesList as $field){
 
 echo "</div>";
 
-require_once ROOT . "/views/footer.php";
+require_once ROOT . "/views/layout/footer.php";

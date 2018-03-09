@@ -6,7 +6,7 @@
  */
 
 
-require_once ROOT . "/views/header.php";
+require_once ROOT . "/views/layout/header.php";
 
 
 echo '
@@ -22,4 +22,4 @@ echo '
 
 echo "</div> ";
 
-require_once ROOT . "/views/footer.php";
+require_once ROOT . "/views/layout/footer.php";

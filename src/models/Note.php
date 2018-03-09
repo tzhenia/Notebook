@@ -6,7 +6,7 @@
  */
 
 
-abstract class Note{
+class Note{
 
     public static function checkNoteItem(){
 

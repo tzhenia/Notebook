@@ -6,7 +6,7 @@
  */
 
 
-require_once ROOT . "/views/header.php";
+require_once ROOT . "/views/layout/header.php";
 
 $status = $noteItem['status'];
 $status = NoteShowController::statusConvert($status);
@@ -41,4 +41,4 @@ echo "
 ";
 
 
-require_once ROOT . "/views/footer.php";
+require_once ROOT . "/views/layout/footer.php";

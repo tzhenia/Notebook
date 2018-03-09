@@ -6,7 +6,7 @@
  */
 
 
-require_once ROOT . "/views/header.php";
+require_once ROOT . "/views/layout/header.php";
 
 echo "
 
@@ -38,4 +38,4 @@ echo "
     ";
 
 require_once ROOT . "/views/requirementsNotes.php";
-require_once ROOT . "/views/footer.php";
+require_once ROOT . "/views/layout/footer.php";
